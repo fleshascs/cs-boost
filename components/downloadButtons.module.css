@@ -5,6 +5,7 @@
 }
 .dbicon {
   padding-right: 6px;
+  max-width: none;
 }
 
 .downloadbutton {
