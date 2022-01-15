@@ -1,6 +1,7 @@
 import clsx from 'clsx';
+import { FC } from 'react';
 
-export function Table({ children, className }: { children?: any; className?: string }) {
+export const Table: FC<{ className?: string }> = ({ children, className }) => {
   return (
     <table
       className={clsx(
@@ -11,9 +12,9 @@ export function Table({ children, className }: { children?: any; className?: str
       {children}
     </table>
   );
-}
+};
 
-export function Th({ children, className }: { children?: any; className?: string }) {
+export const Th: FC<{ className?: string }> = ({ children, className }) => {
   return (
     <th
       className={clsx(
@@ -25,12 +26,12 @@ export function Th({ children, className }: { children?: any; className?: string
       {children}
     </th>
   );
-}
+};
 
-export function Td({ children, className }: { children?: any; className?: string }) {
+export const Td: FC<{ className?: string }> = ({ children, className }) => {
   return (
     <td className={clsx('border-b border-gray-700 text-xs  p-2 text-gray-400', className)}>
       {children}
     </td>
   );
-}
+};
