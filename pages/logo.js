@@ -4,13 +4,13 @@ import Top from '../components/Top';
 import { useEffect, useRef, useState } from 'react';
 
 function getPixelRatio() {
-  var ctx = document.createElement('canvas').getContext('2d'),
+  const ctx = document.createElement('canvas').getContext('2d'),
     dpr = window.devicePixelRatio || 1,
-    bsr = // @ts-ignore
-      ctx.webkitBackingStorePixelRatio || // @ts-ignore
-      ctx.mozBackingStorePixelRatio || // @ts-ignore
-      ctx.msBackingStorePixelRatio || // @ts-ignore
-      ctx.oBackingStorePixelRatio || // @ts-ignore
+    bsr =
+      ctx.webkitBackingStorePixelRatio ||
+      ctx.mozBackingStorePixelRatio ||
+      ctx.msBackingStorePixelRatio ||
+      ctx.oBackingStorePixelRatio ||
       ctx.backingStorePixelRatio ||
       1;
 
@@ -40,7 +40,6 @@ export default function Info() {
   const [height, setHeight] = useState('34');
   const [fontSize, setFontSize] = useState('27');
   useEffect(() => {
-    // @ts-ignore
     createHiDPICanvas(c.current, width, height);
     var ctx = c.current.getContext('2d');
     ctx.clearRect(0, 0, width, height);

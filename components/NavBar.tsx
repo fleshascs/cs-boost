@@ -2,7 +2,6 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import clsx from 'clsx';
 import Link from 'next/link';
-import Image from './Image';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },

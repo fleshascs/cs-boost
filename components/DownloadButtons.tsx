@@ -1,27 +1,12 @@
 import clsx from 'clsx';
 import Image from './Image';
 import styles from './downloadButtons.module.css';
-import { useEffect } from 'react';
-
 interface ButtonsProps {
   className?: string;
 }
 const Buttons = ({ className }: ButtonsProps) => {
-  // useEffect(() => {
-  //   const buttons = document.querySelectorAll('.js-log-click');
-  //   [].map.call(buttons, (button) => {
-  //     button.addEventListener('click', () => log());
-  //   });
-
-  //   function log() {
-  //     fetch('https://fleshas.lt/php/api/csdownloads/').catch((error) => {
-  //       //...
-  //     });
-  //   }
-  // }, []);
-
   function log() {
-    fetch('https://fleshas.lt/php/api/csdownloads/').catch((error) => {
+    fetch('https://fleshas.lt/php/api/csdownloads/').catch(() => {
       //...
     });
   }

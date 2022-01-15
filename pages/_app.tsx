@@ -17,7 +17,8 @@ export default function App({ Component, pageProps }) {
   const _description = meta.description ?? process.env.defaultDescription;
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = () => {
+      // eslint-disable-next-line
       // @ts-ignore google analytics script
       ga('send', 'pageview');
     };
