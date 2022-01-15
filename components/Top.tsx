@@ -8,7 +8,7 @@ interface TopProps extends Totals {
 
 const Top: FC<TopProps> = ({ servers, players, maxPlayers, percentage, title }) => {
   return (
-    <div className='py-5 sm:py-16 flex flex-col lg:flex-row text-sm text-gray-500'>
+    <div className='py-5 sm:py-16 flex flex-col lg:flex-row text-sm text-gray-400'>
       <div>
         <h1 className='text-2xl font-medium mb-2 uppercase'>
           {title ? (
@@ -19,10 +19,13 @@ const Top: FC<TopProps> = ({ servers, players, maxPlayers, percentage, title }) 
             </>
           )}
         </h1>
-        Active servers - <span className='text-amber-300'>{servers}</span> <br />
-        Filled with <span className='text-amber-300'>{players}</span> players out of
-        <span className='text-amber-300'> {maxPlayers}</span> total slots. Percentage player count -{' '}
-        <span className='text-amber-300'>{percentage}%</span>
+        Active servers - <span className='text-amber-300 inline-block min-w-[1rem]'>{servers}</span>{' '}
+        <br />
+        Filled with <span className='text-amber-300 inline-block min-w-[2rem]'>{players}</span>{' '}
+        players out of
+        <span className='text-amber-300 ml-1 inline-block min-w-[2rem]'> {maxPlayers}</span> total
+        slots. Percentage player count -{' '}
+        <span className='text-amber-300 inline-block min-w-[1rem]'>{percentage}%</span>
       </div>
       <Image
         className='ml-auto pt-5 sm:pt-0'
