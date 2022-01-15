@@ -1,0 +1,24 @@
+.dbcontainer {
+  background: rgba(41, 31, 31, 0.9);
+  display: inline-flex;
+  justify-content: center;
+}
+.dbicon {
+  padding-right: 6px;
+}
+
+.downloadbutton {
+  background: #7c1d1d;
+  display: flex;
+  padding: 5px 35px 5px 15px;
+}
+.dbtop {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff;
+}
+.dbbottom {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #f0df25;
+}
