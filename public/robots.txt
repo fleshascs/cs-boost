@@ -1,3 +1,7 @@
-
+# *
 User-agent: *
-Allow: /*
+Allow: /
+
+# Host
+Host: https://cs-boost.lt
+
