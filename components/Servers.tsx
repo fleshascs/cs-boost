@@ -49,7 +49,7 @@ export default function Servers({ servers }: { servers: Server[] }) {
                     height='16'
                     alt='Connect to the counter-strike server'
                     src={require('../images/steam4.png?resize&size=16')}
-                    webp={require('../images/steam4.png?webp&resize&size=16')}
+                    webp={require('../images/steam4.png?resize&size=16&format=webp')}
                   />
                   {item.address}
                 </a>

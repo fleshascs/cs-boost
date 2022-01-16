@@ -23,7 +23,7 @@ const Buttons = ({ className }: ButtonsProps) => {
           width='40'
           height='40'
           src={require('../images/csct.png?resize&size=40')}
-          webp={require('../images/csct.png?webp&resize&size=40')}
+          webp={require('../images/csct.png?resize&size=40&format=webp')}
           alt='CS 1.6 Download'
           title='Counter-Strike 1.6'
         />
@@ -43,7 +43,7 @@ const Buttons = ({ className }: ButtonsProps) => {
           width='40'
           height='40'
           src={require('../images/csct.png?resize&size=40')}
-          webp={require('../images/csct.png?webp&resize&size=40')}
+          webp={require('../images/csct.png?resize&size=40&format=webp')}
           alt='CS 1.6 Download Torrent'
           title='Counter-Strike 1.6 Torrent'
         />

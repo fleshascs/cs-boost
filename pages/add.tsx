@@ -55,7 +55,7 @@ export default function Home() {
             width='304'
             height='135'
             src={require('../images/backlink.png?resize&size=304')}
-            webp={require('../images/backlink.png?webp&resize&size=304')}
+            webp={require('../images/backlink.png?resize&size=304&format=webp')}
             alt='CS 1.6 server example of backlink'
           />
           <br />

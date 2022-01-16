@@ -183,7 +183,6 @@ export default function CSDownload() {
 CSDownload.layoutProps = {
   meta: {
     title: 'CS 1.6 Download - Download Counter-Strike 1.6 FREE',
-
     description:
       "CS 1.6 Non Steam, the download is free, it's a full and original version of the game including the latest updates allowing you to browse server browser and play online"
   }

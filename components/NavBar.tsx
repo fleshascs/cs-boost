@@ -49,7 +49,7 @@ export default function NavBar() {
                     width='40'
                     height='40'
                     src={require('../images/192x192.png?resize&size=40')}
-                    webp={require('../images/192x192.png?webp&resize&size=40')}
+                    webp={require('../images/192x192.png?resize&size=40&format=webp')}
                     alt='CS 1.6 Servers logo'
                     title='CS 1.6 Servers'
                   />
@@ -66,7 +66,7 @@ export default function NavBar() {
                     height='22'
                     src={require('../images/logo.png')}
                     // src={require('../images/logo.png?resize&size=251')}
-                    // webp={require('../images/logo.png?webp&resize&size=251')}
+                    // webp={require('../images/logo.png?resize&size=251&format=webp')}
                     alt='CS 1.6 Servers logo'
                     title='CS 1.6 Servers'
                   /> */}

@@ -32,7 +32,7 @@ const Top: FC<TopProps> = ({ servers, players, maxPlayers, percentage, title }) 
         width='460'
         height='60'
         src={require('../images/cb.jpg?resize&size=460')}
-        webp={require('../images/cb.jpg?webp&resize&size=460')}
+        webp={require('../images/cb.jpg?resize&size=460&format=webp')}
         alt='CS 1.6 Download'
         title='Counter-Strike 1.6'
       />
