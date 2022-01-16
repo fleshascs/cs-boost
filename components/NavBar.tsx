@@ -1,8 +1,9 @@
+import { useRouter } from 'next/router';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import clsx from 'clsx';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import clsx from 'clsx';
+import Image from './Image';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -42,7 +43,16 @@ export default function NavBar() {
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex-shrink-0 flex items-center'>
-                  <img className='block lg:hidden h-10 w-auto' src='192x192.png' alt='cs 1.6' />
+                  {/* <img className='block lg:hidden h-10 w-auto' src='192x192.png' alt='cs 1.6' /> */}
+                  <Image
+                    className='block lg:hidden'
+                    width='40'
+                    height='40'
+                    src={require('../images/192x192.png?resize&size=40')}
+                    webp={require('../images/192x192.png?webp&resize&size=40')}
+                    alt='CS 1.6 Servers logo'
+                    title='CS 1.6 Servers'
+                  />
                   <span
                     className='hidden lg:block text-white'
                     style={{ fontFamily: 'bauerg', fontSize: '1.4em' }}

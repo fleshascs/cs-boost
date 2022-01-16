@@ -10,7 +10,7 @@ export default function Image({ src, webp, ...rest }: ImageProps) {
   return (
     <picture {...rest}>
       {webp ? <source srcSet={webp} type='image/webp' /> : null}
-      <img src={src} {...rest} />
+      <img src={src} title={rest.title ?? rest.alt} {...rest} />
     </picture>
   );
 }
