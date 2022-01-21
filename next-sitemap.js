@@ -1,4 +1,5 @@
 module.exports = {
   siteUrl: require('./site.config').domain,
-  generateRobotsTxt: true
+  generateRobotsTxt: true,
+  exclude: ['/server-info', '/logo']
 };

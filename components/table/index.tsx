@@ -20,7 +20,7 @@ export const Th: FC<{ className?: string }> = ({ children, className }) => {
       className={clsx(
         className,
         // 'border-b border-gray-600 font-medium p-0 sm:p-3 pt-0 pb-3 text-gray-200 text-left'
-        'border-b border-gray-600 text-xs p-0 sm:p-3 pt-0 pb-3 text-gray-200 text-left uppercase'
+        'border-b border-gray-600 text-xs p-2 sm:p-3 pt-2 pb-3 text-gray-200 text-left uppercase'
       )}
     >
       {children}

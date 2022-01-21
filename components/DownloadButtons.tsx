@@ -12,11 +12,11 @@ const Buttons = ({ className }: ButtonsProps) => {
   }
 
   return (
-    <div className={clsx(styles.dbcontainer, className, 'py-3')}>
+    <div className={clsx(styles.dbcontainer, className, 'p-3')}>
       <a
         href='https://fleshas.lt/cs-download/Counter-Strike1.6.exe'
         onClick={log}
-        className={clsx(styles.downloadbutton, 'mr-1')}
+        className={clsx(styles.downloadbutton, 'mr-3')}
       >
         <Image
           className={styles.dbicon}
@@ -35,7 +35,7 @@ const Buttons = ({ className }: ButtonsProps) => {
       </a>
       <a
         href='https://fleshas.lt/cs-download/Counter-Strike 1.6.exe.torrent'
-        className={clsx(styles.downloadbutton, 'mr-1')}
+        className={styles.downloadbutton}
         onClick={log}
       >
         <Image

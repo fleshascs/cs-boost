@@ -5,3 +5,5 @@ Allow: /
 # Host
 Host: https://cs-boost.lt
 
+# Sitemaps
+Sitemap: https://cs-boost.lt/sitemap.xml

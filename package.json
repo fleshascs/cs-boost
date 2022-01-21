@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-static": "next build && next export",
+    "build-static": "next build && next export && npm run postbuild",
     "postbuild": "cross-env next-sitemap --config next-sitemap.js",
     "start": "next start",
     "typescript": "tsc",
@@ -16,6 +16,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "chart.js": "^3.7.0",
     "clsx": "^1.1.1",
+    "cssnano": "^5.0.15",
     "extracted-loader": "^1.0.7",
     "file-loader": "^6.2.0",
     "ignore-loader": "^0.1.2",

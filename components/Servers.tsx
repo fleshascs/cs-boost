@@ -10,11 +10,11 @@ export const ServersListPlaceholder: FC = () => {
     <>
       {Array.from({ length: 20 }, (_, i) => (
         <tr key={i}>
-          <Td>{i + 1}</Td>
-          <Td>
-            <div className='w-[343px]' />
+          <Td className='sm:w-[2%]'>{i + 1}</Td>
+          <Td className='sm:w-[47%]'>
+            <div className='w-[230px]' />
           </Td>
-          <Td>
+          <Td className='sm:w-[22%]'>
             <Image
               className='inline mr-1'
               width='16'
@@ -23,12 +23,12 @@ export const ServersListPlaceholder: FC = () => {
               src={require('../images/steam4.png?resize&size=16')}
               webp={require('../images/steam4.png?resize&size=16&format=webp')}
             />
-            <div className='w-[126px]' />
+            <div className='w-[129px] ' />
           </Td>
-          <Td>
+          <Td className='sm:w-[21%]'>
             <div className='w-[103px]' />
           </Td>
-          <Td>
+          <Td className='sm:w-[8%]'>
             <div className='w-[50px]'>0/32</div>
           </Td>
         </tr>
@@ -42,8 +42,8 @@ export const ServersList: FC<{ servers: Server[] }> = ({ servers }) => {
     <>
       {servers.map((item) => (
         <tr key={item.address}>
-          <Td>{item.num}</Td>
-          <Td className='text-amber-300'>
+          <Td className='sm:w-[2%]'>{item.num}</Td>
+          <Td className='sm:w-[47%] sm:flex-1 sm:max-w-0 sm:overflow-hidden sm:text-ellipsis sm:whitespace-nowrap text-amber-300'>
             <Link href={`/server-info?id=${item.id}`}>
               <a className='group' title='View server details'>
                 {item.hostname}
@@ -51,7 +51,7 @@ export const ServersList: FC<{ servers: Server[] }> = ({ servers }) => {
               </a>
             </Link>
           </Td>
-          <Td>
+          <Td className='sm:w-[22%]'>
             <a
               href={`steam://connect/${item.address}`}
               title='Connect to the counter-strike server'
@@ -68,8 +68,8 @@ export const ServersList: FC<{ servers: Server[] }> = ({ servers }) => {
               {item.address}
             </a>
           </Td>
-          <Td>{item.map}</Td>
-          <Td>
+          <Td className='sm:w-[21%]'>{item.map}</Td>
+          <Td className='sm:w-[8%]'>
             {item.players}/{item.maxplayers}
           </Td>
         </tr>
