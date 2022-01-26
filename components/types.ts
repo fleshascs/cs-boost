@@ -24,7 +24,8 @@ export interface Totals {
 }
 
 export interface ServersResponse {
-  servers: Server[];
+  boostedServers: Server[];
+  top50servers: Server[];
   total: Totals;
 }
 

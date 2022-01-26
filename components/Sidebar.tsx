@@ -46,8 +46,8 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
             />
           </a>
         </div>
-        {children}
       </Card>
+      {children}
     </>
   );
 };

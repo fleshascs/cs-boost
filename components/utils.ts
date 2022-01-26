@@ -6,9 +6,10 @@ export function calculateIncrease(startingValue: number, finalValue: number) {
   return Math.round(value * 10) / 10;
 }
 
-export function withServerListDefaults(response) {
+export function withServerListDefaults(response: ServersResponse) {
   const defaults = {
-    servers: [],
+    top50servers: [],
+    boostedServers: [],
     total: { servers: '', players: '', maxPlayers: '', percentage: '' }
   };
 
@@ -28,8 +29,8 @@ export function useFetchServers() {
   const { isLoading, error, data } = useQuery<ServersResponse, Error>('servers', () =>
     fetch(process.env.domain + '/api/servers.php').then((res) => res.json())
   );
-  const { servers, total } = withServerListDefaults(data);
-  return { isLoading, error, servers, total };
+  const { top50servers, boostedServers, total } = withServerListDefaults(data);
+  return { isLoading, error, top50servers, boostedServers, total };
 }
 
 export function useFetchServerInfo(id: string, enabled: boolean) {
