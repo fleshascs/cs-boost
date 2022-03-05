@@ -1,3 +1,4 @@
+import AdSense from 'react-adsense';
 import Servers, { ServersList, ServersListPlaceholder } from '../components/Servers';
 import ServersMini, {
   ServersListMini,
@@ -30,6 +31,15 @@ export default function Home() {
               <ServersList servers={boostedServers} />
             </GeneralLoading>
           </Servers>
+          <div className='pt-2' />
+          <AdSense.Google
+            client='ca-pub-3219722052726085'
+            slot='4013757856'
+            style={{ display: 'block' }}
+            format='auto'
+            responsive='true'
+            layoutKey='-gw-1+2a-9x+5c'
+          />
           <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
             WORLDS TOP 50 SERVERS
           </h2>

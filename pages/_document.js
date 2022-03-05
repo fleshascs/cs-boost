@@ -16,6 +16,11 @@ export default class Document extends NextDocument {
         <body className='antialiased text-gray-400 bg-black'>
           <Main />
           <NextScript />
+          <script
+            async
+            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3219722052726085'
+            crossorigin='anonymous'
+          ></script>
         </body>
       </Html>
     );

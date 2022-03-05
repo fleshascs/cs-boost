@@ -1,21 +1,32 @@
 import clsx from 'clsx';
 import Image from './Image';
 import styles from './downloadButtons.module.css';
+import { useEffect, useRef } from 'react';
 interface ButtonsProps {
   className?: string;
 }
 const Buttons = ({ className }: ButtonsProps) => {
-  function log() {
-    fetch('https://fleshas.lt/php/api/csdownloads/').catch(() => {
-      //...
-    });
-  }
+  const directBtn = useRef(null);
+  const torrentBtn = useRef(null);
+
+  useEffect(() => {
+    //can't just use react onClick={log}, it doesn't work on firefox
+    directBtn.current.addEventListener('click', log);
+    torrentBtn.current.addEventListener('click', log);
+    function log() {
+      fetch('https://fleshas.lt/php/api/csdownloads/');
+    }
+    return () => {
+      directBtn.current.removeEventListener('click', log);
+      torrentBtn.current.removeEventListener('click', log);
+    };
+  }, []);
 
   return (
     <div className={clsx(styles.dbcontainer, className, 'p-3')}>
       <a
         href='https://fleshas.lt/cs-download/Counter-Strike1.6.exe'
-        onClick={log}
+        ref={directBtn}
         className={clsx(styles.downloadbutton, 'mr-3')}
       >
         <Image
@@ -36,7 +47,7 @@ const Buttons = ({ className }: ButtonsProps) => {
       <a
         href='https://fleshas.lt/cs-download/Counter-Strike 1.6.exe.torrent'
         className={styles.downloadbutton}
-        onClick={log}
+        ref={torrentBtn}
       >
         <Image
           className={styles.dbicon}
