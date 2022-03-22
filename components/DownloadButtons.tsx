@@ -25,7 +25,8 @@ const Buttons = ({ className }: ButtonsProps) => {
   return (
     <div className={clsx(styles.dbcontainer, className, 'p-3')}>
       <a
-        href='https://fleshas.lt/cs-download/Counter-Strike1.6.exe'
+        // href='https://fleshas.lt/cs-download/Counter-Strike1.6.exe'
+        href='http://dl.fleshas.lt/cs/cstrike.exe'
         ref={directBtn}
         className={clsx(styles.downloadbutton, 'mr-3')}
       >
@@ -45,7 +46,8 @@ const Buttons = ({ className }: ButtonsProps) => {
         </div>
       </a>
       <a
-        href='https://fleshas.lt/cs-download/Counter-Strike 1.6.exe.torrent'
+        // href='https://fleshas.lt/cs-download/Counter-Strike 1.6.exe.torrent'
+        href='http://dl.fleshas.lt/cs/cstrike.exe.torrent'
         className={styles.downloadbutton}
         ref={torrentBtn}
       >
