@@ -62,7 +62,7 @@ const VisitsChart: FC = () => {
     )
   );
 
-  if (isLoading) return <Card className='h-52 sm:h-96'>Loading...</Card>;
+  if (isLoading) return <Card className='h-[11.5rem] sm:h-[21.4rem]'>Loading...</Card>;
   if (error) return <Card>An error has occurred</Card>;
 
   const chartData = buildData(data);
