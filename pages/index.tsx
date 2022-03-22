@@ -8,6 +8,7 @@ import Sidebar from '../components/Sidebar';
 import GeneralLoading from '../components/GeneralLoading';
 import { useFetchServers } from '../components/utils';
 import Top from '../components/Top';
+import MasterServerVisitsChart from '../components/masterServerAnalytics/VisitsChart';
 
 export default function Home() {
   const { isLoading, error, top50servers, boostedServers, total } = useFetchServers();
@@ -21,6 +22,10 @@ export default function Home() {
       />
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
+          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
+            Master Server unique visits
+          </h2>
+          <MasterServerVisitsChart />
           <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>BOOSTED SERVERS</h2>
           <Servers>
             <GeneralLoading
