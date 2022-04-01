@@ -1,4 +1,4 @@
-import AdSense from 'react-adsense';
+// import AdSense from 'react-adsense';
 import Servers, { ServersList, ServersListPlaceholder } from '../components/Servers';
 import ServersMini, {
   ServersListMini,
