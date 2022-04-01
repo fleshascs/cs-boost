@@ -19,7 +19,7 @@ export default class Document extends NextDocument {
           <script
             async
             src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3219722052726085'
-            crossorigin='anonymous'
+            crossOrigin='anonymous'
           ></script>
         </body>
       </Html>
