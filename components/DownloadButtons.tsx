@@ -17,8 +17,8 @@ const Buttons = ({ className }: ButtonsProps) => {
       fetch('https://fleshas.lt/php/api/csdownloads/');
     }
     return () => {
-      directBtn.current.removeEventListener('click', log);
-      torrentBtn.current.removeEventListener('click', log);
+      directBtn.current?.removeEventListener('click', log);
+      torrentBtn.current?.removeEventListener('click', log);
     };
   }, []);
 

@@ -6,7 +6,7 @@ export const Table: FC<{ className?: string }> = ({ children, className }) => {
     <table
       className={clsx(
         className,
-        'border-collapse table-auto w-full text-sm rounded-xl text-gray-400 border border-gray-800  bg-gray-900 mb-4'
+        'border-collapse table-auto w-full text-sm text-gray-400 border border-gray-800  bg-gray-900 mb-4'
       )}
     >
       {children}
