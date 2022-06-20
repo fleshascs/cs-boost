@@ -19,13 +19,18 @@ const Top: FC<TopProps> = ({ servers, players, maxPlayers, percentage, title }) 
             </>
           )}
         </h1>
-        Active servers - <span className='text-amber-300 inline-block min-w-[1rem]'>{servers}</span>{' '}
+        Active servers -{' '}
+        <span className='text-amber-300 inline-block min-w-[1rem] text-center'>{servers}</span>{' '}
         <br />
-        Filled with <span className='text-amber-300 inline-block min-w-[2rem]'>{players}</span>{' '}
+        Filled with{' '}
+        <span className='text-amber-300 inline-block min-w-[2rem] text-center'>{players}</span>{' '}
         players out of
-        <span className='text-amber-300 ml-1 inline-block min-w-[2rem]'> {maxPlayers}</span> total
-        slots. Percentage player count -{' '}
-        <span className='text-amber-300 inline-block min-w-[1rem]'>{percentage}%</span>
+        <span className='text-amber-300 ml-1 inline-block min-w-[2rem] text-center'>
+          {' '}
+          {maxPlayers}
+        </span>{' '}
+        total slots. Percentage player count -{' '}
+        <span className='text-amber-300 inline-block min-w-[1rem] text-center'>{percentage}%</span>
       </div>
       <Image
         className='ml-auto pt-5 sm:pt-0'
@@ -36,6 +41,34 @@ const Top: FC<TopProps> = ({ servers, players, maxPlayers, percentage, title }) 
         alt='CS 1.6 Download'
         title='Counter-Strike 1.6'
       />
+      {/* <source media="(max-width: 800px)" srcSet="elva-800w.jpg"/> */}
+      {/* <Image
+        className='ml-auto pt-5 sm:pt-0'
+        width='460'
+        height='60'
+        sources={[
+          {
+            type: 'default',
+            media: '(max-width: 800px)',
+            src: require('../images/cb.jpg?resize&size=460')
+          },
+          {
+            type: 'webp',
+            media: '(max-width: 800px)',
+            src: require('../images/cb.jpg?resize&size=688&format=webp')
+          },
+          {
+            type: 'webp',
+            src: require('../images/cb.jpg?resize&size=460&format=webp')
+          },
+          {
+            type: 'default',
+            src: require('../images/cb.jpg?resize&size=460')
+          }
+        ]}
+        alt='CS 1.6 Download'
+        title='Counter-Strike 1.6'
+      /> */}
     </div>
   );
 };
