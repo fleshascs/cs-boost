@@ -4,13 +4,9 @@ import GeneralLoading from '../components/GeneralLoading';
 import { useFetchServerInfo, useFetchServers } from '../components/utils';
 import Top from '../components/Top';
 import Players from '../components/Players';
-import ServersMini, {
-  ServersListMini,
-  ServersListPlaceholderMini
-} from '../components/ServersMini';
 
 export default function Info() {
-  const { isLoading, error, top50servers, total } = useFetchServers();
+  const { total } = useFetchServers();
   const router = useRouter();
   const { id } = router.query;
   const {
@@ -65,20 +61,7 @@ export default function Info() {
           )}
         </div>
         <div className='basis-1/3 pt-10 lg:pt-0'>
-          <Sidebar>
-            <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-              WORLDS TOP 10 SERVERS
-            </h2>
-            <ServersMini>
-              <GeneralLoading
-                error={error}
-                isLoading={isLoading}
-                fallback={<ServersListPlaceholderMini />}
-              >
-                <ServersListMini servers={top50servers.slice(0, 10)} />
-              </GeneralLoading>
-            </ServersMini>
-          </Sidebar>
+          <Sidebar />
         </div>
       </div>
     </>

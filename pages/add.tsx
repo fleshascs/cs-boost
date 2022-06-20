@@ -2,14 +2,9 @@ import Sidebar from '../components/Sidebar';
 import Image from '../components/Image';
 import { useFetchServers } from '../components/utils';
 import Top from '../components/Top';
-import ServersMini, {
-  ServersListMini,
-  ServersListPlaceholderMini
-} from '../components/ServersMini';
-import GeneralLoading from '../components/GeneralLoading';
 
 export default function Home() {
-  const { isLoading, error, top50servers, total } = useFetchServers();
+  const { total } = useFetchServers();
   return (
     <>
       <Top
@@ -72,20 +67,7 @@ export default function Home() {
           />
         </div>
         <div className='basis-1/3 pt-10 lg:pt-0'>
-          <Sidebar>
-            <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-              WORLDS TOP 10 SERVERS
-            </h2>
-            <ServersMini>
-              <GeneralLoading
-                error={error}
-                isLoading={isLoading}
-                fallback={<ServersListPlaceholderMini />}
-              >
-                <ServersListMini servers={top50servers.slice(0, 10)} />
-              </GeneralLoading>
-            </ServersMini>
-          </Sidebar>
+          <Sidebar />
         </div>
       </div>
     </>
