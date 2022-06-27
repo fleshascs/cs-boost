@@ -49,7 +49,7 @@ const buildData = (masters: MasterStats[]) => {
       return {
         label: master.label,
         data: master.stats.map((item) => item.uniques),
-        backgroundColor: master.color
+        backgroundColor: '#334155' //master.color
       };
     })
   };

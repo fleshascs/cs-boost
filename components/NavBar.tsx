@@ -7,16 +7,24 @@ import Image from './Image';
 
 const navigation = [
   { name: 'Home', href: '/' },
+  // {
+  //   name: (
+  //     <>
+  //       Add a Server <span className='font-semibold text-red-700'>FREE</span>
+  //     </>
+  //   ),
+  //   href: '/add'
+  // },
   {
     name: (
       <>
-        Add a Server <span className='text-amber-300'>FREE</span>
+        <span className='font-semibold text-red-700'>Buy Boost</span>
       </>
     ),
-    href: '/add'
+    href: '/purchase'
   },
   {
-    name: <span className='text-amber-300'>CS 1.6 Download</span>,
+    name: 'CS 1.6 Download',
     href: '/counter-strike-download'
   },
   { name: 'Contact', href: '/contact' }
@@ -44,22 +52,23 @@ export default function NavBar() {
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
                 <div className='flex-shrink-0 flex items-center'>
                   {/* <img className='block lg:hidden h-10 w-auto' src='192x192.png' alt='cs 1.6' /> */}
-                  <Image
-                    className='block lg:hidden'
-                    width='40'
-                    height='40'
-                    src={require('../images/192x192.png?resize&size=40')}
-                    webp={require('../images/192x192.png?resize&size=40&format=webp')}
-                    alt='CS 1.6 Servers logo'
-                    title='CS 1.6 Servers'
-                  />
-                  <span
-                    className='hidden lg:block text-white'
-                    style={{ fontFamily: 'bauerg', fontSize: '1.4em' }}
-                  >
-                    {process.env.siteName}
-                  </span>
-
+                  <a href='/'>
+                    <Image
+                      className='block lg:hidden'
+                      width='40'
+                      height='40'
+                      src={require('../images/192x192.png?resize&size=40')}
+                      webp={require('../images/192x192.png?resize&size=40&format=webp')}
+                      alt='CS 1.6 Servers logo'
+                      title='CS 1.6 Servers'
+                    />
+                    <span
+                      className='hidden lg:block text-white'
+                      style={{ fontFamily: 'bauerg', fontSize: '1.4em' }}
+                    >
+                      {process.env.siteName}
+                    </span>
+                  </a>
                   {/* <Image
                     className='hidden lg:block text-white'
                     width='251'
@@ -87,7 +96,7 @@ export default function NavBar() {
                             item.href === router.pathname
                               ? 'bg-gray-900 text-white'
                               : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                            'px-3 py-2 text-xs uppercase '
+                            'px-3 py-2 text-md uppercase '
                           )}
                           aria-current={item.href === router.pathname ? 'page' : undefined}
                         >

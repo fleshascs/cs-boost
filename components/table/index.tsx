@@ -4,9 +4,13 @@ import { FC } from 'react';
 export const Table: FC<{ className?: string }> = ({ children, className }) => {
   return (
     <table
+      style={{
+        boxShadow: 'rgb(0 0 0 / 8%) 0px 1px 4px 0px',
+        borderColor: '#cbd2d6'
+      }}
       className={clsx(
         className,
-        'border-collapse table-auto w-full text-sm text-gray-400 border border-gray-800  bg-gray-900 mb-4'
+        'border-collapse table-auto w-full text-md border rounded-md mb-4 bg-white'
       )}
     >
       {children}
@@ -20,7 +24,7 @@ export const Th: FC<{ className?: string }> = ({ children, className }) => {
       className={clsx(
         className,
         // 'border-b border-gray-600 font-medium p-0 sm:p-3 pt-0 pb-3 text-gray-200 text-left'
-        'border-b border-gray-600 text-xs p-2 sm:p-3 pt-2 pb-3 text-gray-200 text-left uppercase'
+        'border-b  text-xs p-2 sm:p-3 pt-2 pb-3  text-left uppercase'
       )}
     >
       {children}
@@ -29,9 +33,5 @@ export const Th: FC<{ className?: string }> = ({ children, className }) => {
 };
 
 export const Td: FC<{ className?: string }> = ({ children, className }) => {
-  return (
-    <td className={clsx('border-b border-gray-700 text-xs  p-2 text-gray-400', className)}>
-      {children}
-    </td>
-  );
+  return <td className={clsx('border-b text-xs  p-3', className)}>{children}</td>;
 };

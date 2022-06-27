@@ -2,21 +2,51 @@ import { FC, ReactNode } from 'react';
 import AdSense from 'react-adsense';
 import DownloadButtons from './DownloadButtons';
 import Card from './Card';
-
+import { ListGroup, ListGroupItem } from './ListGroup';
+import Image from './Image';
 export interface SidebarProps {
   children?: ReactNode;
 }
 
+const externalLinks = [
+  {
+    href: 'http://counter-strike-download.lt',
+    title: 'Counter-Strike 1.6 Download'
+  },
+  {
+    href: 'https://counterstrike16download.net',
+    title: 'CS 1.6 download'
+  },
+  {
+    href: 'https://fleshas.lt/csdownload',
+    title: 'Fleshas.lt - CS 1.6 download'
+  }
+];
+
 const Sidebar: FC<SidebarProps> = ({ children }) => {
   return (
     <>
-      <h2 className='text-amber-300 py-2 text-sm font-medium uppercase'>
-        Download COUNTER-STRIKE 1.6
-      </h2>
+      <h2 className='font-semibold py-2 text-md font-medium '>Links</h2>
 
-      <DownloadButtons className='w-full' />
-      <h2 className='text-amber-300 py-2 text-sm font-medium uppercase mt-5'>links</h2>
-      <Card>
+      <ListGroup>
+        {externalLinks.map((link) => (
+          <ListGroupItem key={link.href}>
+            <Image
+              width='25'
+              height='25'
+              src={require('../images/cs-boost-b.png?resize&size=25')}
+              webp={require('../images/cs-boost-b.png?resize&size=25&format=webp')}
+              alt='CS 1.6 Download'
+              title='Counter-Strike 1.6'
+            />
+            <a target='_blank' rel='noopener' href={link.href}>
+              {link.title}
+            </a>
+          </ListGroupItem>
+        ))}
+      </ListGroup>
+
+      {/* <Card innerPadding={false}>
         <div className='p-2'>
           <a
             target='_blank'
@@ -37,17 +67,12 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
             CS 1.6 download original
           </a>
         </div>
-        <div className='p-2'>
-          <a target='_blank' rel='noopener' href='https://www.hey.lt/details.php?id=csboost'>
-            <img
-              width='83'
-              height='31'
-              src='https://www.hey.lt/count.php?id=csboost'
-              alt='Hey.lt - Nemokamas lankytojų skaitliukas'
-            />
-          </a>
-        </div>
-      </Card>
+      </Card> */}
+
+      <h2 className='font-semibold py-2 text-md font-medium'>Download Counter-Strike 1.6</h2>
+
+      <DownloadButtons className='w-full' />
+
       <div className='pt-2' />
       <AdSense.Google
         client='ca-pub-3219722052726085'

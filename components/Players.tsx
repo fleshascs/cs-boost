@@ -18,7 +18,7 @@ export default function Players({ players }: { players: Player[] }) {
         {players.map((item) => (
           <tr key={item.Id}>
             <Td>{item.Id + 1}</Td>
-            <Td className='text-amber-300'>{item.Name}</Td>
+            <Td className='font-semibold text-red-700'>{item.Name}</Td>
             <Td>{item.Frags}</Td>
           </tr>
         ))}

@@ -19,11 +19,9 @@ export default function Home() {
       />
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-            Master Server unique visits
-          </h2>
+          <h2 className='py-2 text-md font-medium'>Master Server unique visits</h2>
           <MasterServerVisitsChart />
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>BOOSTED SERVERS</h2>
+          <h2 className='py-2 text-md font-medium'>Boosted servers</h2>
           <Servers>
             <GeneralLoading
               error={error}
@@ -42,7 +40,7 @@ export default function Home() {
             responsive='true'
             layoutKey='-gw-1+2a-9x+5c'
           /> */}
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
+          <h2 className='py-2 text-md font-medium'>
             Counter-Strike 1.6 Boost Service Buy, Counter-Strike 1.6 Boost Player
           </h2>
 
@@ -74,9 +72,7 @@ export default function Home() {
             text messages to the server block.
           </p>
 
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-            What Is CS 1.6 Boost?
-          </h2>
+          <h2 className='py-2 text-md font-medium'>What Is CS 1.6 Boost?</h2>
           <p>
             CS 1.6 Boost is a service that advertises and publishes Counter-Strike 1.6 servers. This
             advertising service targets Counter-Strike servers. Using it, you can ensure the server
@@ -109,9 +105,7 @@ export default function Home() {
             tasks to earn points or win in the different types of gameplay available today.
           </p>
 
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-            About Counter-Strike 1.6
-          </h2>
+          <h2 className='py-2 text-md font-medium'>About Counter-Strike 1.6</h2>
           <p>
             One of the most popular games worldwide is Counter-Strike 1.6 due to its many features.
             This kind of game is great for people who want to have fun when they have time to kill.
@@ -143,14 +137,14 @@ export default function Home() {
               href='https://csdownload.net'
               target='_blank'
               rel='noopener'
-              className='text-amber-300'
+              className='font-semibold text-red-700'
             >
               https://csdownload.net
             </a>
             .
           </p>
 
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>Conclusion</h2>
+          <h2 className='py-2 text-md font-medium'>Conclusion</h2>
           <p>
             The Boost is a service meant to advertise and publish Counter-Strike 1.6 servers.
             Counter-Strike 1.6 servers are the target audience for the Boost service. It enables

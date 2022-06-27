@@ -27,7 +27,7 @@ export default function Info() {
 
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>Server details</h2>
+          <h2 className='py-2 text-md font-medium'>Server details</h2>
           {infoIsLoading ? null : (
             <>
               <div className='flex flex-col lg:flex-row mb-10'>
@@ -43,17 +43,18 @@ export default function Info() {
                 />
                 <ul className='list-none'>
                   <li>
-                    Server name: <span className='text-amber-300'>{server.hostname}</span>
+                    Server name:{' '}
+                    <span className='font-semibold text-red-700'>{server.hostname}</span>
                   </li>
                   <li>
-                    IP Address: <span className='text-amber-300'>{server.address}</span>
+                    IP Address: <span className='font-semibold text-red-700'>{server.address}</span>
                   </li>
                   <li>
-                    Map: <span className='text-amber-300'>{server.map}</span>
+                    Map: <span className='font-semibold text-red-700'>{server.map}</span>
                   </li>
                 </ul>
               </div>
-              <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>Players</h2>
+              <h2 className='py-2 text-md font-medium'>Players</h2>
               <GeneralLoading error={infoError} isLoading={infoIsLoading}>
                 <Players players={players} />
               </GeneralLoading>

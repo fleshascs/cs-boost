@@ -39,7 +39,11 @@ export default function CSDownload() {
         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: schema }} />
       </Head>
       <Top
-        title={<span className='text-amber-300'>Counter-Strike 1.6 Download</span>}
+        title={
+          <>
+            <span style={{ color: '#a91c1c' }}>Counter-Strike 1.6</span> Download
+          </>
+        }
         servers={total.servers}
         players={total.players}
         maxPlayers={total.maxPlayers}
@@ -48,14 +52,14 @@ export default function CSDownload() {
 
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>CS 1.6 FREE download</h2>
+          <h2 className='py-2 text-md font-medium'>CS 1.6 FREE download</h2>
           <p>
             Your search for an all-in-one, online team shooter game, ends here!{' '}
-            <span className='text-amber-300'>Counter-Strike</span> was first developed in 1999, and
-            ever since then, it has evolved through high tech innovations and modifications to
-            become the world’s best online game. It gets even better because it is %100 FREE! No
-            hidden fees or charges, click on the download button and get ready to enjoy the most
-            entertaining first-shooter game ever.
+            <span className='font-semibold text-red-700'>Counter-Strike</span> was first developed
+            in 1999, and ever since then, it has evolved through high tech innovations and
+            modifications to become the world’s best online game. It gets even better because it is
+            %100 FREE! No hidden fees or charges, click on the download button and get ready to
+            enjoy the most entertaining first-shooter game ever.
           </p>
           <p>
             Ever since its first release by Valve L.L.C from designers Ming Le and Jesse Cliffe over
@@ -71,15 +75,13 @@ export default function CSDownload() {
           </p>
           <p>
             Upon creation, several remakes have been made, but{' '}
-            <span className='text-amber-300'>Counter-Strike 1.6</span> is the final major software
-            update of the game.
+            <span className='font-semibold text-red-700'>Counter-Strike 1.6</span> is the final
+            major software update of the game.
           </p>
           <div>
             <DownloadButtons className='px-3 my-10' />
           </div>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-            HOW TO PLAY COUNTERSTRIKE
-          </h2>
+          <h2 className='py-2 text-md font-medium uppercase'>HOW TO PLAY COUNTERSTRIKE</h2>
           <p>
             Counter-Strike is one of the most-played games of all times. As a result of its
             competitive nature, Counter-Strike takes you on an exciting journey that requires hours
@@ -92,7 +94,7 @@ export default function CSDownload() {
             loading='lazy'
             src='https://www.youtube.com/embed/lIOAIttydFI'
           />
-          <h3 className='text-gray-300 py-2 text-sm font-medium uppercase'>START OF THE GAME</h3>
+          <h3 className='py-2 text-md font-medium uppercase'>START OF THE GAME</h3>
           <p>
             At the beginning of the game, you’ll be provided with an option that says “new game”.
             Click on this button to create your own server. Make sure to stick to that particular
@@ -119,9 +121,7 @@ export default function CSDownload() {
             will teach you how to handle the knife in CS properly and guess what, it is entirely
             free!
           </p>
-          <h3 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-            HOW TO AVOID GETTING HIT
-          </h3>
+          <h3 className='py-2 text-md font-medium uppercase'>HOW TO AVOID GETTING HIT</h3>
           <p>
             Unlike other games, when you die in Counter-Strike, you’re out for that round. This is
             the main reason why players try to stay alive as much as possible, and that’s highly
@@ -141,7 +141,7 @@ export default function CSDownload() {
               open.
             </li>
           </ul>
-          <h3 className='text-gray-300 py-2 text-sm font-medium uppercase'>Maps</h3>
+          <h3 className='py-2 text-md font-medium uppercase'>Maps</h3>
           <p>
             There are lots of exciting scenes in Counter-Strike 1.6 but here are some of the maps
             you should look forward to Aztec- Aztec is one of the largest maps. Cbble – In light of
@@ -152,7 +152,7 @@ export default function CSDownload() {
             real deal! Inferno – set around Noon, this map has undergone several modifications to
             create a better user experience.
           </p>
-          <h3 className='text-gray-300 py-2 text-sm font-medium uppercase'>Tournaments</h3>
+          <h3 className='py-2 text-md font-medium uppercase'>Tournaments</h3>
           <p>
             Aside from the seamless user experience, this right here is the main reason why Counter
             Strike 1.6 continues to and will always be the best online first-shooter game. In 2018,
@@ -160,7 +160,7 @@ export default function CSDownload() {
             year, another round of championships has been announced with prize totaling
             approximately $200,000.
           </p>
-          <h3 className='text-gray-300 py-2 text-sm font-medium uppercase'>Call to action</h3>
+          <h3 className='py-2 text-md font-medium uppercase'>Call to action</h3>
           <p>
             What are you waiting for, click on the download button and begin your journey to a whole
             new gaming experience and if you play hard, some cool cash too!

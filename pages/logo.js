@@ -64,7 +64,7 @@ export default function Info() {
 
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>Logo maker 3k</h2>
+          <h2 className='py-2 text-md font-medium uppercase'>Logo maker 3k</h2>
 
           <label>
             Text:

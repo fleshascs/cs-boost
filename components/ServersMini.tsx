@@ -28,7 +28,7 @@ export const ServersListMini: FC<{ servers: Server[] }> = ({ servers }) => {
       {servers.map((item) => (
         <tr key={item.address}>
           <Td className='sm:w-[2%]'>{item.num}</Td>
-          <Td className='sm:w-[47%] sm:flex-1 sm:max-w-0 sm:overflow-hidden sm:text-ellipsis sm:whitespace-nowrap text-amber-300'>
+          <Td className='sm:w-[47%] sm:flex-1 sm:max-w-0 sm:overflow-hidden sm:text-ellipsis sm:whitespace-nowrap text-red-700 font-semibold'>
             <Link href={`/server-info?id=${item.id}`}>
               <a className='group' title='View server details'>
                 {item.hostname}

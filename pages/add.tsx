@@ -16,9 +16,7 @@ export default function Home() {
 
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase'>
-            Rules for adding a server
-          </h2>
+          <h2 className='py-2 text-md font-medium'>Rules for adding a server</h2>
           <ul className='list-disc'>
             <li>Upload any DLL/EXE and similar malicious files</li>
             <li>Use auto-connect plugins</li>
@@ -33,13 +31,11 @@ export default function Home() {
             <li>Change client rates (cl_updaterate, cl_cmdrate etc)</li>
             <li>Use plugins that destroy player's game, like Pika, GameDestroyer, etc</li>
           </ul>
-          <h2 className='text-gray-300 py-2 text-sm font-medium uppercase mt-10'>
-            What you will need to do
-          </h2>
-          <span className='text-amber-300'>Add a link</span> of one of our CS download sites in{' '}
-          <span className='text-amber-300'>to your website</span>. It can be added to your sidebar
-          or a footer, choice is yours. Your website has to meet these{' '}
-          <span className='text-amber-300'>criterias</span>:
+          <h2 className='py-2 text-md font-medium mt-10'>What you will need to do</h2>
+          <span className='font-semibold text-red-700'>Add a link</span> of one of our CS download
+          sites in <span className='font-semibold text-red-700'>to your website</span>. It can be
+          added to your sidebar or a footer, choice is yours. Your website has to meet these{' '}
+          <span className='font-semibold text-red-700'>criterias</span>:
           <br />
           <br />
           <ul className='list-disc'>
@@ -49,7 +45,7 @@ export default function Home() {
           <br />
           <br />
           Contact us by <b>Email:</b>{' '}
-          <span className='text-amber-300'>cs.fleshas.lt@gmail.com</span> <br />
+          <span className='font-semibold text-red-700'>cs.fleshas.lt@gmail.com</span> <br />
           <br />
           <Image
             width='304'

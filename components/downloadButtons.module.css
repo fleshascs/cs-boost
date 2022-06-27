@@ -1,7 +1,10 @@
 .dbcontainer {
-  background: rgba(41, 31, 31, 0.9);
+  /* background: rgba(41, 31, 31, 0.9); */
+  background: #fff;
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 4px 0px;
   display: inline-flex;
   justify-content: center;
+  border-radius: 7px;
 }
 .dbicon {
   padding-right: 6px;
@@ -9,8 +12,11 @@
 }
 
 .downloadbutton {
-  background: #7c1d1d;
+  background: #a91c1c;
+  /* background: linear-gradient(#4c5844 42%, #4c5844 100%); */
+  /* background: linear-gradient(315deg, #58424a 0, #e0003e 100%); */
   display: flex;
+  border-radius: 5px;
   padding: 5px 35px 5px 15px;
 }
 .dbtop {
@@ -21,5 +27,5 @@
 .dbbottom {
   font-size: 0.8em;
   font-weight: bold;
-  color: #f0df25;
+  color: #000;
 }

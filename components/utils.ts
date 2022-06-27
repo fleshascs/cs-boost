@@ -43,6 +43,16 @@ export function useFetchServerInfo(id: string, enabled: boolean) {
   return { isLoading, error, server, players };
 }
 
+export function useFetchServerInfoByIP(ip: string) {
+  const { isLoading, error, data, refetch } = useQuery<ServerInfoResponse, Error>(
+    ['server-info', ip],
+    () =>
+      fetch(process.env.domain + '/api/server_info_by_ip.php?ip=' + ip).then((res) => res.json())
+  );
+  const { server } = withServerInfoDefaults(data);
+  return { isLoading, error, server, refetch };
+}
+
 export function buildBreadcrumbs(title: string, url: string) {
   return JSON.stringify({
     '@context': 'https://schema.org',
