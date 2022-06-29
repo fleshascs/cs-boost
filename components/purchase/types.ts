@@ -4,3 +4,9 @@ export interface EditableServerValues {
   isPerm?: boolean;
   termsAndConditions: boolean;
 }
+
+export interface Server {
+  hostname: string;
+  mapname: string;
+  status: number;
+}

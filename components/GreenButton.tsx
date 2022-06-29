@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
-export const GreenButton: FC = (props) => {
+export const GreenButton: FC<{ children: ReactNode }> = (props) => {
   return (
     <button
       type='button'

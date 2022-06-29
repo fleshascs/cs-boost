@@ -1,131 +1,73 @@
-import { useRef, useEffect, FC, useCallback } from 'react';
+import { FC, useMemo, useRef, useState } from 'react';
 import { Form, Formik } from 'formik';
-import { validationSchema } from './validationSchema';
-import { EditableServerValues } from './types';
-import { PrimaryButton } from '../PrimaryButton';
-import { TextField } from '../TextField';
-import Card from '../Card';
-import Image from '../Image';
+import { createValidationSchema } from './validationSchema';
 import { ListGroup, ListGroupItem } from '../ListGroup';
 import { RadioButton } from '../RadioButton';
 import { Checkbox } from '../Checkbox';
-import { useFetchServerInfoByIP } from '../utils';
-// const debounce = require('lodash.debounce');
-
-const defaultValues = {
-  serverIP: '',
-  serviceLength: 30,
-  paymentMethod: 'paypal',
-  termsAndConditions: false
-};
+import { Server } from './types';
+import { PrimaryButton } from '../PrimaryButton';
+import Card from '../Card';
+import Image from '../Image';
+import { ServerField } from './ServerField';
 
 const serviceLength = [
   {
     label: '30 Days boost',
     endLabel: '€ 10 EUR.',
-    value: 30,
-    checked: true
+    value: '30'
   },
   {
     label: '60 Days boost',
     endLabel: '€ 20 EUR.',
-    value: 60
+    value: '60'
   },
   {
     label: '180 Days boost',
     endLabel: '€ 60 EUR.',
-    value: 180
+    value: '180'
   }
 ];
 
-export const PurchaseForm: FC<{
-  onSubmit: (values: EditableServerValues) => void;
-  initialValues?: EditableServerValues;
-}> = ({ onSubmit, initialValues }) => {
-  const formRef = useRef(null);
+const defaultValues = {
+  serverIP: '',
+  serviceLength: serviceLength[0].value,
+  paymentMethod: 'paypal',
+  termsAndConditions: false
+};
 
-  useEffect(() => {
-    if (!initialValues) return;
-    formRef.current.setValues(initialValues);
-  }, [initialValues]);
-
-  const {
-    isLoading: infoIsLoading,
-    error: infoError,
-    server,
-    refetch
-  } = useFetchServerInfoByIP(formRef.current?.values.serverIP);
-  console.log('formRef.current?.values.serverIP', formRef.current?.values.serverIP);
-
-  useEffect(() => {
-    refetch();
-  }, [formRef.current?.values.serverIP]);
-
-  // formRef.current.values
-
-  function validateEmail(value) {
-    let error;
-    if (!value) {
-      error = 'Required';
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-      error = 'Invalid email address';
-    }
-    return error;
-  }
-
-  // useCallback(() => {
-  //   return debounce(formik.validateForm, 500)
-  // },[])
+export const PurchaseForm: FC = () => {
+  const formEl = useRef(null);
+  const [serverDetails, setServerDetails] = useState<Server>();
+  const validationSchema = useMemo(() => createValidationSchema(setServerDetails), [serverDetails]);
 
   return (
     <Formik
-      innerRef={formRef}
-      initialValues={initialValues ?? defaultValues}
+      initialValues={defaultValues}
       validationSchema={validationSchema}
-      onSubmit={(values, actions) => {
-        onSubmit(values);
-        actions.setSubmitting(false);
+      onSubmit={() => {
+        formEl.current.submit();
       }}
     >
       {({ values, touched, errors, handleChange, isSubmitting }) => (
-        <Form>
+        <Form ref={formEl} action='https://fleshas.lt/paypal-boost/payment/index.php' method='POST'>
           <h2 className='py-2 text-md font-medium'>Service details</h2>
           <ListGroup>
             <ListGroupItem>
-              <TextField
+              <ServerField
                 name='serverIP'
                 label='Server IP:PORT'
                 placeholder='IP:PORT'
                 value={values.serverIP}
                 onChange={handleChange}
-                error={touched.serverIP && Boolean(errors.serverIP)}
                 helperText={touched.serverIP && errors.serverIP}
-                validate={validateEmail}
               />
-              {server ? (
-                <>
-                  <div className='text-sm'>{server.hostname}</div>
-                  <img
-                    key={server.mapname}
-                    // onError={function (e) {
-                    //   e.currentTarget.src = '/maps/nopicture.jpg';
-                    // }}
-                    className='mr-5'
-                    width='100'
-                    height='75'
-                    src={'/maps/' + server.mapname + '.jpg'}
-                    alt={'cs map' + server.mapname}
-                  />
-                </>
-              ) : null}
-
-              {/* <div>{JSON.stringify(server)}</div> */}
             </ListGroupItem>
             <ListGroupItem>
               <label className='form-label inline-block mb-1 text-gray-700 pt-2 text-md font-medium'>
                 Service length
               </label>
             </ListGroupItem>
+
             {serviceLength.map((service) => (
               <ListGroupItem key={service.label}>
                 <RadioButton
@@ -136,7 +78,6 @@ export const PurchaseForm: FC<{
                     </>
                   }
                   name='serviceLength'
-                  checked={service.checked}
                   value={service.value}
                 />
               </ListGroupItem>
@@ -166,7 +107,6 @@ export const PurchaseForm: FC<{
               }
               name='paymentMethod'
               value='paypal'
-              checked
             />
           </Card>
           <Checkbox

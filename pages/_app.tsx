@@ -56,16 +56,6 @@ export default function App({ Component, pageProps }) {
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: buildBreadcrumbs(_title, router.pathname) }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-                ga('create', '${process.env.googleAnalyticsKey}', 'auto');
-                ga('send', 'pageview');`
-          }}
-        />
       </Head>
 
       <QueryClientProvider client={queryClient}>

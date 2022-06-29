@@ -1,14 +1,14 @@
-import { FC, HTMLProps } from 'react';
-import { Field } from 'formik';
+import { FC, ReactNode } from 'react';
+import { Field, FieldAttributes, FieldConfig } from 'formik';
 
-interface TextFieldProps extends HTMLProps<HTMLInputElement> {
-  error: boolean;
-  helperText: string;
-}
+export type TextFieldProps = FieldAttributes<any> &
+  Pick<FieldConfig, 'validate'> & {
+    helperText: string | ReactNode;
+  };
 
-export const TextField: FC<TextFieldProps> = ({ error, helperText, ...rest }) => {
+export const TextField: FC<TextFieldProps> = ({ helperText, ...rest }) => {
   return (
-    <div className='mb-3 xl:w-96'>
+    <div className='mb-3 w-full sm:w-96 '>
       <label className='form-label inline-block mb-1 text-gray-700 pt-2 text-md font-medium'>
         Enter Server IP:PORT
       </label>
@@ -33,7 +33,7 @@ export const TextField: FC<TextFieldProps> = ({ error, helperText, ...rest }) =>
       '
         {...rest}
       />
-      <div className='text-red-500 text-sm'>{helperText}</div>
+      <div className={'text-red-500 text-sm'}>{helperText}</div>
     </div>
   );
 };
