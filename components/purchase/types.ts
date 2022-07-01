@@ -10,3 +10,7 @@ export interface Server {
   mapname: string;
   status: number;
 }
+
+export interface ServerValidationResponse {
+  server: Server;
+}

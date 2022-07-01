@@ -1,10 +1,9 @@
-import { FC, useMemo, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 import { Form, Formik } from 'formik';
-import { createValidationSchema } from './validationSchema';
+import { validationSchema } from './validationSchema';
 import { ListGroup, ListGroupItem } from '../ListGroup';
 import { RadioButton } from '../RadioButton';
 import { Checkbox } from '../Checkbox';
-import { Server } from './types';
 import { PrimaryButton } from '../PrimaryButton';
 import Card from '../Card';
 import Image from '../Image';
@@ -37,9 +36,6 @@ const defaultValues = {
 
 export const PurchaseForm: FC = () => {
   const formEl = useRef(null);
-  const [serverDetails, setServerDetails] = useState<Server>();
-  const validationSchema = useMemo(() => createValidationSchema(setServerDetails), [serverDetails]);
-
   return (
     <Formik
       initialValues={defaultValues}

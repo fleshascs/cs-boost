@@ -11,30 +11,14 @@ type ServerFieldProps = Omit<TextFieldProps, 'value'> & { value: string };
 
 export const ServerField: FC<ServerFieldProps> = (props) => {
   const [addressToValidate, setAddressToValidate] = useState('');
-  const { isLoading, server, error } = useFetchServerInfoByIP(addressToValidate);
+  const { isLoading, server } = useFetchServerInfoByIP(addressToValidate);
 
   useDebounce(() => setAddressToValidate(props.value), 500, [props.value]);
-  const [mapImage, setMapImage] = useState<string>('');
-
-  useEffect(() => {
-    if (server?.status !== 1) return;
-    fetch(mapPath(server.mapname)).then((r) => {
-      setMapImage(r.ok ? server.mapname : '');
-    });
-  }, [server]);
+  const mapImage = useMap(server?.mapname);
 
   return (
     <div className='flex flex-col lg:flex-row lg:items-center lg:space-x-4'>
-      <TextField
-        {...props}
-        validate={(value) => {
-          if (addressToValidate !== value) return;
-          if (isLoading) return 'Validating a server...';
-          // eslint-disable-next-line quotes
-          if (error) return "Can't get server details";
-          if (server?.status !== 1) return 'Server is offline';
-        }}
-      />
+      <TextField {...props} />
       {isLoading ? <Spinner /> : null}
       {!isLoading && server?.status === 1 ? (
         <>
@@ -59,3 +43,16 @@ export const ServerField: FC<ServerFieldProps> = (props) => {
     </div>
   );
 };
+
+function useMap(map: string) {
+  const [mapImage, setMapImage] = useState<string>('');
+
+  useEffect(() => {
+    if (!map) return;
+    fetch(mapPath(map)).then((r) => {
+      setMapImage(r.ok ? map : '');
+    });
+  }, [map]);
+
+  return mapImage;
+}

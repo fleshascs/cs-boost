@@ -1,12 +1,12 @@
 import '../styles/global.css';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClientProvider } from 'react-query';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { buildBreadcrumbs } from '../components/utils';
-
-const queryClient = new QueryClient();
+import { queryClient } from '../components/reactQueryClient';
+// import { ReactQueryDevtools } from 'react-query/devtools';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -59,6 +59,7 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <QueryClientProvider client={queryClient}>
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
         <Layout>
           <Component {...pageProps} />
         </Layout>
