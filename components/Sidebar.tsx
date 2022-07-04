@@ -71,7 +71,7 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
 
       <h2 className='font-semibold py-2 text-md font-medium'>Download Counter-Strike 1.6</h2>
 
-      <DownloadButtons className='w-full' />
+      <DownloadButtons className='w-full mb-4' />
 
       <div className='pt-2' />
       <AdSense.Google
