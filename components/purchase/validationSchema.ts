@@ -16,7 +16,6 @@ export const validationSchema = yup.object({
       return isAddressValid(value);
     })
     .test('is-server-online', 'Server is offline', function (value) {
-      // debounce example https://codesandbox.io/s/4jzgr?file=/index.js:1386-1407
       return fetchServerInfoByIP(value);
     })
     .required('ServerIP:Port is required'),

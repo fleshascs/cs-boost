@@ -31,7 +31,7 @@ export async function fetchServerInfoByIP(address: string) {
       queryFn(address)
     );
     return server?.status === 1;
-  } catch (error) {
-    console.log('error', error);
+  } catch {
+    return false;
   }
 }
