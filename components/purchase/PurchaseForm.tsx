@@ -45,7 +45,7 @@ export const PurchaseForm: FC = () => {
       }}
     >
       {({ values, touched, errors, handleChange, isSubmitting }) => (
-        <Form ref={formEl} action='https://fleshas.lt/paypal-boost/payment/index.php' method='POST'>
+        <Form ref={formEl} action={process.env.domain + '/api/payment/index.php'} method='POST'>
           <h2 className='py-2 text-md font-medium'>Service details</h2>
           <ListGroup>
             <ListGroupItem>

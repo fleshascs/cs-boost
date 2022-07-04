@@ -27,7 +27,7 @@ export function withServerInfoDefaults(response) {
 
 export function useFetchServers() {
   const { isLoading, error, data } = useQuery<ServersResponse, Error>('servers', () =>
-    fetch(process.env.domain + '/api/servers.php?full=1').then((res) => res.json())
+    fetch(process.env.domain + '/api/servers.php?full=1&resolve_host=0').then((res) => res.json())
   );
   const { top50servers, boostedServers, total } = withServerListDefaults(data);
   return { isLoading, error, top50servers, boostedServers, total };
