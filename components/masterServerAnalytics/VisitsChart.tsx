@@ -69,7 +69,7 @@ const VisitsChart: FC = () => {
 
   return (
     <Card>
-      <div className='flex w-full px-5 pb-4  text-white'>
+      <div className='flex w-full pt-4 sm:px-4 text-white'>
         <Bar options={options} data={chartData} />
       </div>
     </Card>
