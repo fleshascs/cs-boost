@@ -1,7 +1,6 @@
 import { FC, ReactNode } from 'react';
 import AdSense from 'react-adsense';
 import DownloadButtons from './DownloadButtons';
-import Card from './Card';
 import { ListGroup, ListGroupItem } from './ListGroup';
 import Image from './Image';
 export interface SidebarProps {
@@ -45,29 +44,6 @@ const Sidebar: FC<SidebarProps> = ({ children }) => {
           </ListGroupItem>
         ))}
       </ListGroup>
-
-      {/* <Card innerPadding={false}>
-        <div className='p-2'>
-          <a
-            target='_blank'
-            rel='noopener'
-            href='http://counter-strike-download.lt'
-            title='Counter-Strike 1.6 Download'
-          >
-            Counter-Strike 1.6 Download
-          </a>
-        </div>
-        <div className='p-2'>
-          <a href='https://counterstrike16download.net' target='_blank' rel='noopener'>
-            CS 1.6 download
-          </a>
-        </div>
-        <div className='p-2'>
-          <a href='https://fleshas.lt/csdownload' target='_blank' rel='noopener'>
-            CS 1.6 download original
-          </a>
-        </div>
-      </Card> */}
 
       <h2 className='font-semibold py-2 text-md font-medium'>Download Counter-Strike 1.6</h2>
 

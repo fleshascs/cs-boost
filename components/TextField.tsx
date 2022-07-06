@@ -1,6 +1,7 @@
 import { FC, ReactNode, useId } from 'react';
 import { Field, FieldAttributes, FieldConfig } from 'formik';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type TextFieldProps = FieldAttributes<any> &
   Pick<FieldConfig, 'validate'> & {
     helperText: string | ReactNode;
