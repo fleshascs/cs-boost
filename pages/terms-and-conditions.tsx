@@ -4,7 +4,7 @@ export default function Contact() {
       <div className='pb-24 mt-8'>
         <h1 className='py-2 text-2xl font-bold'>Terms and conditions</h1>
         <h2 className='py-2 text-md font-medium'>Prohibited acts from your server</h2>
-        <ul className='list-disc mb-6'>
+        <ul className='list-disc list-inside mb-6'>
           <li>Upload any .dll, .exe .cmd .jar .vbs .bat and similar malicious files</li>
           <li>Use auto-connect plugins</li>
           <li>Modify GameMenu, VGUI or practice any other forms of slowhacking</li>

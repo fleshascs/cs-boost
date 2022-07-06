@@ -127,7 +127,7 @@ export default function CSDownload() {
             the main reason why players try to stay alive as much as possible, and that’s highly
             achievable if you decide to implore these strategies:
           </p>
-          <ul className='list-decimal ml-5 my-5'>
+          <ul className='list-decimal list-inside ml-5 my-5'>
             <li>
               avoid open gunfights, and whenever you find yourself in such a situation don’t stay
               there for too long.

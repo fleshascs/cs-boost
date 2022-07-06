@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useId } from 'react';
 import { Field, FieldAttributes, FieldConfig } from 'formik';
 
 export type TextFieldProps = FieldAttributes<any> &
@@ -7,13 +7,19 @@ export type TextFieldProps = FieldAttributes<any> &
   };
 
 export const TextField: FC<TextFieldProps> = ({ helperText, ...rest }) => {
+  const id = useId();
   return (
     <div className='mb-3 w-full sm:w-96 '>
-      <label className='form-label inline-block mb-1 text-gray-700 pt-2 text-md font-medium'>
+      <label
+        htmlFor={id}
+        className='form-label inline-block mb-1 text-gray-700 pt-2 text-md font-medium'
+      >
         Enter Server IP:PORT
       </label>
       <Field
         type='text'
+        aria-describedby={id + '-desc'}
+        id={id}
         className='
         form-control
         block
@@ -33,7 +39,9 @@ export const TextField: FC<TextFieldProps> = ({ helperText, ...rest }) => {
       '
         {...rest}
       />
-      <div className={'text-red-500 text-sm'}>{helperText}</div>
+      <div id={id + '-desc'} className={'text-red-500 text-sm'}>
+        {helperText}
+      </div>
     </div>
   );
 };

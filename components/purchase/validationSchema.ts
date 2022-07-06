@@ -12,7 +12,11 @@ export function isAddressValid(address: string | undefined) {
 export const validationSchema = yup.object({
   serverIP: yup
     .string()
-    .test('is-valid-ip-port', 'invalid Server IP:PORT', function (value) {
+    .test('is-valid-ip-port', 'invalid Server IP:PORT', function (value, { createError }) {
+      if (/(\s)/.test(value)) {
+        // eslint-disable-next-line quotes
+        return createError({ message: "IP:PORT can't contain spaces" });
+      }
       return isAddressValid(value);
     })
     .test('is-server-online', 'Server is offline', function (value) {

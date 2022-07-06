@@ -17,13 +17,16 @@ export const Checkbox: FC<CheckboxProps> = ({ label, helperText, ...rest }) => {
           styles.checkbox
         )}
         type='checkbox'
+        aria-describedby={id + '-desc'}
         id={id}
         {...rest}
       />
       <label className='form-check-label inline-block text-gray-800' htmlFor={id}>
         {label}
       </label>
-      <div className='text-red-500 text-sm'>{helperText}</div>
+      <div id={id + '-desc'} className='text-red-500 text-sm'>
+        {helperText}
+      </div>
     </div>
   );
 };
