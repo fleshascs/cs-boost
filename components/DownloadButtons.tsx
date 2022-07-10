@@ -27,7 +27,8 @@ const Buttons = ({ className }: ButtonsProps) => {
       <a
         // href='https://fleshas.lt/cs-download/Counter-Strike1.6.exe'
         // href='https://dlfleshas.b-cdn.net/cs/cstrike.exe'
-        href='https://cdn.cs-boost.lt/cs/cstrike.exe'
+        // href='https://cdn.cs-boost.lt/cs/cstrike.exe'
+        href='/csdownload'
         ref={directBtn}
         className={clsx(styles.downloadbutton, 'mr-3')}
       >
@@ -49,7 +50,8 @@ const Buttons = ({ className }: ButtonsProps) => {
       <a
         // href='https://fleshas.lt/cs-download/Counter-Strike 1.6.exe.torrent'
         // href='https://dlfleshas.b-cdn.net/cs/cstrike.exe.torrent'
-        href='https://cdn.cs-boost.lt/cs/cstrike.exe.torrent'
+        // href='https://cdn.cs-boost.lt/cs/cstrike.exe.torrent'
+        href='/csdownload-torrent'
         className={styles.downloadbutton}
         ref={torrentBtn}
       >
