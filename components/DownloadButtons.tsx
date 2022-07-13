@@ -31,6 +31,7 @@ const Buttons = ({ className }: ButtonsProps) => {
         href='/csdownload'
         ref={directBtn}
         className={clsx(styles.downloadbutton, 'mr-3')}
+        target='_blank'
       >
         <Image
           className={styles.dbicon}
@@ -54,6 +55,7 @@ const Buttons = ({ className }: ButtonsProps) => {
         href='/csdownload-torrent'
         className={styles.downloadbutton}
         ref={torrentBtn}
+        target='_blank'
       >
         <Image
           className={styles.dbicon}
