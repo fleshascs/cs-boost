@@ -52,20 +52,29 @@ export default function CSDownload() {
 
       <div className='flex flex-col lg:flex-row lg:space-x-4 pb-24'>
         <div className='basis-2/3'>
-          <h2 className='py-2 text-md font-medium'>CS 1.6 FREE download</h2>
+          <h2 className='py-2 text-md font-medium'>CS 1.6 download FREE </h2>
           <p>
-            Your search for an all-in-one, online team shooter game, ends here!{' '}
-            <span className='font-semibold text-red-700'>Counter-Strike</span> was first developed
-            in 1999, and ever since then, it has evolved through high tech innovations and
-            modifications to become the world’s best online game. It gets even better because it is
-            %100 FREE! No hidden fees or charges, click on the download button and get ready to
-            enjoy the most entertaining first-shooter game ever.
+            Your search for an all-in-one, online team shooter game, ends here! Download CS 1.6 Non
+            Steam, the CS 1.6 download is free, it's a full and original Counter-Strike version of
+            the game including the latest CS 1.6 updates allowing you to browse server browser and
+            play online. <b>Counter-Strike 1.6</b> game was first developed in 1999, and ever since
+            then, it has evolved through high tech innovations and modifications to become the
+            world’s best online game. It gets even better because it is %100 FREE! No hidden fees or
+            charges, click on the Counter-Strike 1.6 download button and get ready to enjoy the most
+            entertaining first-shooter game ever. You can choose from few options, you can download
+            the CS 1.6 install directly from your browser or download CS 1.6 from Torrent by
+            clicking on Counter-Strike 1.6 Torrent download.
           </p>
           <p>
             Ever since its first release by Valve L.L.C from designers Ming Le and Jesse Cliffe over
-            two decades ago, and sill yet, Counter-Strike is still played all over the world till
-            today.
+            two decades ago, and sill yet, Counter-Strike game is still played all over the world
+            till today, and over hundred of thousand copies of the game ar downloaded from various
+            CS 1.6 download pages. Our installation supports most of the major Windows operating
+            systems, you can download cs 1.6 for windows 10, windows 7, 8 or even xp.
           </p>
+          <div>
+            <DownloadButtons className='px-3 my-10' />
+          </div>
           <p>
             Jesse Cliffe and Ming Le forged an unbreakable partnership at a time when game creators
             paid little or no attention to realistic games. Science fiction games ruled the day.
@@ -78,14 +87,11 @@ export default function CSDownload() {
             <span className='font-semibold text-red-700'>Counter-Strike 1.6</span> is the final
             major software update of the game.
           </p>
-          <div>
-            <DownloadButtons className='px-3 my-10' />
-          </div>
-          <h2 className='py-2 text-md font-medium uppercase'>HOW TO PLAY COUNTERSTRIKE</h2>
+          <h3 className='py-2 text-md font-medium uppercase'>Download CS 1.6 WaRzOnE edition</h3>
           <p>
-            Counter-Strike is one of the most-played games of all times. As a result of its
-            competitive nature, Counter-Strike takes you on an exciting journey that requires hours
-            of gameplay to perfection.
+            One of the best third party released versions of cs 1.6. Counter-Strike is one of the
+            most-played games of all times. As a result of its competitive nature, Counter-Strike
+            takes you on an exciting journey that requires hours of gameplay to perfection.
           </p>
           <iframe
             title='cs 1.6 game'
@@ -94,7 +100,7 @@ export default function CSDownload() {
             loading='lazy'
             src='https://www.youtube.com/embed/lIOAIttydFI'
           />
-          <h3 className='py-2 text-md font-medium uppercase'>START OF THE GAME</h3>
+          <h3 className='py-2 text-md font-medium uppercase'>HOW TO PLAY COUNTER-STRIKE</h3>
           <p>
             At the beginning of the game, you’ll be provided with an option that says “new game”.
             Click on this button to create your own server. Make sure to stick to that particular
