@@ -57,7 +57,9 @@ export default function Info() {
                   <li>
                     Boost expire date:{' '}
                     <span className='font-semibold text-red-700'>
-                      {dayjs.unix(Number(server.date_end)).format(DATE_TIME_FORMAT)}
+                      {server.date_end === '0'
+                        ? 'No expire date'
+                        : dayjs.unix(Number(server.date_end)).format(DATE_TIME_FORMAT)}
                     </span>
                   </li>
                 </ul>
