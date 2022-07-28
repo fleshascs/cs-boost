@@ -4,6 +4,8 @@ import GeneralLoading from '../components/GeneralLoading';
 import { useFetchServerInfo, useFetchServers } from '../components/utils';
 import Top from '../components/Top';
 import Players from '../components/Players';
+import dayjs from 'dayjs';
+import { DATE_TIME_FORMAT } from '../components/constants';
 
 export default function Info() {
   const { total } = useFetchServers();
@@ -51,6 +53,12 @@ export default function Info() {
                   </li>
                   <li>
                     Map: <span className='font-semibold text-red-700'>{server.map}</span>
+                  </li>
+                  <li>
+                    Boost expire date:{' '}
+                    <span className='font-semibold text-red-700'>
+                      {dayjs.unix(Number(server.date_end)).format(DATE_TIME_FORMAT)}
+                    </span>
                   </li>
                 </ul>
               </div>
